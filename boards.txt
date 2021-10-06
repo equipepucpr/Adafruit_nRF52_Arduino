@@ -155,6 +155,60 @@ feather52840sense.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
 feather52840sense.menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1
 
 # -----------------------------------
+# PUCPR Follow 2021
+# -----------------------------------
+followpucpr.name=PUCPR Follow 2021
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+followpucpr.vid.0=0x239A
+followpucpr.pid.0=0x80E9
+followpucpr.vid.1=0x239A
+followpucpr.pid.1=0x00E9
+followpucpr.vid.2=0x239A
+followpucpr.pid.2=0x00EA
+followpucpr.vid.3=0x239A
+followpucpr.pid.3=0x80EA
+
+# Upload
+followpucpr.bootloader.tool=bootburn
+followpucpr.upload.tool=nrfutil
+followpucpr.upload.protocol=nrfutil
+followpucpr.upload.use_1200bps_touch=true
+followpucpr.upload.wait_for_upload_port=true
+followpucpr.upload.maximum_size=815104
+followpucpr.upload.maximum_data_size=237568
+
+# Build
+followpucpr.build.mcu=cortex-m4
+followpucpr.build.f_cpu=64000000
+followpucpr.build.board=NRF52840_FOLLOW
+followpucpr.build.core=nRF5
+followpucpr.build.variant=follow_pucpr
+followpucpr.build.usb_manufacturer="Equipe PUCPR"
+followpucpr.build.usb_product="Follow 2021 PUCPR"
+followpucpr.build.extra_flags=-DNRF52840_XXAA {build.flags.usb}
+followpucpr.build.ldscript=nrf52840_s140_v6.ld
+followpucpr.build.vid=0x239A
+followpucpr.build.pid=0x80E9
+
+# SoftDevice Menu
+followpucpr.menu.softdevice.s140v6=S140 6.1.1
+followpucpr.menu.softdevice.s140v6.build.sd_name=s140
+followpucpr.menu.softdevice.s140v6.build.sd_version=6.1.1
+followpucpr.menu.softdevice.s140v6.build.sd_fwid=0x00B6
+
+# Debug Menu
+followpucpr.menu.debug.l0=Level 0 (Release)
+followpucpr.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0
+followpucpr.menu.debug.l1=Level 1 (Error Message)
+followpucpr.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1
+followpucpr.menu.debug.l2=Level 2 (Full Debug)
+followpucpr.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
+followpucpr.menu.debug.l3=Level 3 (Segger SystemView)
+followpucpr.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
+followpucpr.menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1
+
+# -----------------------------------
 # Adafruit ItsyBitsy nRF52840 Express
 # -----------------------------------
 itsybitsy52840.name=Adafruit ItsyBitsy nRF52840 Express
