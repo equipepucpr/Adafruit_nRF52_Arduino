@@ -46,6 +46,10 @@ extern "C"
 #define PIN_LED1             (18)
 
 #define LED_BUILTIN          PIN_LED1
+ 
+#define LED_CONN             PIN_LED1
+#define LED_BLUE             PIN_LED1
+#define LED_RED              PIN_LED1
 
 #define LED_STATE_ON         1         // State when LED is litted
 
